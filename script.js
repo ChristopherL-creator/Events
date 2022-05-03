@@ -131,16 +131,15 @@ const corso1 = {
 function createStudentsListHtml(studentArray) {
     const studContainer = document.getElementById("studenti-container"); 
   
-    studContainer.innerHTML = ' ';
+    studContainer.innerHTML = ' '; 
+//  chiedere;
   
     for (const studente of studentArray) {
       const li = document.createElement("li");
       const br = document.createElement("br");
   
       const nameDiv = document.createElement("div");
-      const nameNode = document.createTextNode(
-        studente.nome + " " + studente.cognome
-      );
+      const nameNode = document.createTextNode(studente.nome + " " + studente.cognome);
       nameDiv.appendChild(nameNode);
   
       const ageDiv = document.createElement("div");
@@ -164,17 +163,19 @@ function createStudentsListHtml(studentArray) {
 
 function showStudents() {
 
-//  usando lambda:
-//      const femaleStudents = studenti.filter((studente) => studente.genere === 'f'); 
-
-//      createStudentsListHtml(femaleStudents);
-
     createStudentsListHtml(studenti); 
 }
 //  creo funzione per mostrare lista studenti;
 
 // per mostrare solo studentesse;
-function keepFemaleStudents(studente) {
+function keepFemaleStudents(studente) { 
+  
+//  usando lambda:
+//      const femaleStudents = studenti.filter((studente) => studente.genere === 'f'); 
+
+//      createStudentsListHtml(femaleStudents); 
+//  richiamo createStudentsListHtml, riferita a risultato femaleStudents;
+
     if (studente.genere === 'femmina') {
         return true; 
     } else { 
@@ -206,5 +207,5 @@ function showStudentsByAge() {
     createStudentsListHtml(studentsCopy);
 } 
 //  creo funzione per mostrare nuovo array ordinato; funzione non pura, perche crea nuova funzione 
-//  modificata; posso risolvere clonando array originale, e facendo sorting su quello; 
+//  modificata; posso risolvere clonando array originale(shallow clone), e facendo sorting su quello; 
 
