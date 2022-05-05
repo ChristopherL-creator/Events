@@ -206,6 +206,6 @@ function showStudentsByAge() {
 
     createStudentsListHtml(studentsCopy);
 } 
-//  creo funzione per mostrare nuovo array ordinato; funzione non pura, perche crea nuova funzione 
+//  creo funzione per  mostrare nuovo array ordinato; funzione non pura, perche crea nuova funzione 
 //  modificata; posso risolvere clonando array originale, e facendo sorting su quello; 
 
