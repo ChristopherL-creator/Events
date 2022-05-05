@@ -131,7 +131,8 @@ const corso1 = {
 function createStudentsListHtml(studentArray) {
     const studContainer = document.getElementById("studenti-container"); 
   
-    studContainer.innerHTML = ' ';
+    studContainer.innerHTML = ' '; 
+//  per scrivere in html tramite javascript; stringa vuota per ripulire contenuto tag html;
   
     for (const studente of studentArray) {
       const li = document.createElement("li");
@@ -173,7 +174,7 @@ function showStudents() {
 }
 //  creo funzione per mostrare lista studenti;
 
-// per mostrare solo studentesse;
+//  per mostrare solo studentesse;
 function keepFemaleStudents(studente) {
     if (studente.genere === 'femmina') {
         return true; 
